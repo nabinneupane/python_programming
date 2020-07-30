@@ -49,28 +49,33 @@ file = open('registrant.json')
 
 data = json.load(file); 
 
-for i in data['registrant']:
+for i in data['registrants']:
     print(i)
 
 
 print ("\n\n all set for modifying values \n\n")
-for i in data['registrant']:
+
+
+
+
+for i in data['registrants']:
     
     flag = True
     flag2 = True
                 
+        
     for j in range(0,len(contactList)):
         if(i["email"] == contactList[j].getEmail() and i["email"] != "None"):
-            if ( contactList[j].getName == "None" and i["name"] !="None"):
+            if ( contactList[j].getName() == "None" and i["name"] !="None"):
                 contactList[j].setName(i["name"])
-            if ( contactList[j].getPhone == "None" and i["phone"] !="None"):
+            if ( contactList[j].getPhone() == "None" and i["phone"] !="None"):
                 contactList[j].setPhone(i["phone"])
             flag = False
             break
         elif (i["phone"] == contactList[j].getPhone() and i["phone"] != "None"):
-            if (contactList[j].getName =="None" and i["name"] != "None"):
+            if (contactList[j].getName() =="None" and i["name"] != "None"):
                 contactList[j].setName(i["name"])
-            if (i["email"] !="None" and contactList[j].getEmail == "None"):
+            if (i["email"] !="None" and contactList[j].getEmail() == "None"):
                 contactList[j].setEmail(i["email"])            
             flag = False
             break
@@ -79,8 +84,7 @@ for i in data['registrant']:
         
         for k in range(0,len(leadsList)):
             if(i["email"] == leadsList[k].getEmail() and i["email"] != "None"):
-                
-                #remomve it from leads list if matched
+                #remove it from leads list if matched
                 leadsList.remove(leadsList[k])
                 contactList.append(Contacts(i["name"],i["email"],i["phone"]))
                 flag2 = False

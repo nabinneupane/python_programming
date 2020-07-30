@@ -1,5 +1,5 @@
 {
-  "registrant": [
+  "registrants": [
     {
       "name": "Tom Jones",
       "email": "tom@jones.com",
@@ -14,6 +14,16 @@
       "name": "Uma Thurman",
       "email": "uma@thurs.com",
       "phone": "None"
+    },
+    {
+      "name": "Doug Emerty",
+      "email": "emerty.dough@hotmail.com",
+      "phone": "4564445556"
+    },
+    {
+      "name": "Kevin Peterson",
+      "email": "peterson.kevin@yahoo.com",
+      "phone": "4442223334"
     }
   ]
 }

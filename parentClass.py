@@ -17,5 +17,5 @@ class ParentClass:
         self.Phone = phone; 
     def printValue(self):
         print("\t ========================")
-        print("\t Name: ", self.Name , "    Email: ", self.Email , "     Phone: ", self.Phone);
+        print("\t Name: ", self.Name , "    Email: ", self.Email , "     Phone: ", self.Phone)
         
