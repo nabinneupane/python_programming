@@ -60,6 +60,7 @@ print ("\n\n all set for modifying values \n\n")
 
 for i in data['registrants']:
     
+    #boolean value to check...
     flag = True
     flag2 = True
                 
